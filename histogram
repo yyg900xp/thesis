@@ -87,9 +87,3 @@ ylim([0,300]);
 title('Histogram of the sampled data by CMS method');
 
 
-figure(4)
-xz = 0:0.01:20;
-plot(xz,stblpdf(xz,alpha1,beta,sigma1,mu,'quick'),...
-    xz, stblpdf(xz,alpha2,beta,sigma1,mu,'quick'),...
-    xz, stblpdf(xz,alpha3,beta,sigma1,mu,'quick'))
-axis([0 20 0 0.7]);
