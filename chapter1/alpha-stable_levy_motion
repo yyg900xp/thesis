@@ -1,15 +1,27 @@
-a1 = 0.1;
+a1 = 0.1; 
 a2 = 0.5;
 a3 = 0.8;
+# set the values of alpha (index of stability)
+
 beta=1;
+# set the values of beta (skewness parameter)
+
 dt=0.01;
+# set the values of scale parameter
+
 n=1000;
+# set the number of the increments
+
 delta=0;
+# set the values of location parameter
+
 t = (dt:dt:n*dt)';
+#create the time interval
 
 increments1=step(dt,a1,beta,n);
 increments2=step(dt,a2,beta,n);
 increments3=step(dt,a3,beta,n);
+#use step function to sample the increments 
 
 path1=cumsum(increments1);
 path2=cumsum(increments2);
