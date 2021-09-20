@@ -1,3 +1,7 @@
+%This file is used to generate a data that is stable distributed S(alpha, beta,difference^(1/alpha),mu).
+%The algorithm is based on CMS method which shown in the thesis.
+%the n refers to the number of the data that we want to sample.
+
 function Y = step(difference,alpha,beta,n)
 sigma=difference^(1/alpha);
 mu=0;
