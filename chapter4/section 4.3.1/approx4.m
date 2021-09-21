@@ -1,3 +1,5 @@
+
+
 rng(123)
 difference = 0.01;
 alpha = 0.5;
@@ -125,7 +127,3 @@ end
 
 ab=sum(vv)+(1/gamma(1));
 
-figure(1)
-plot(desired_x,u1)
-xlabel('x');
-ylabel('u(x,0.01)');
