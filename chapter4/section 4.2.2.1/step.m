@@ -1,4 +1,5 @@
 %This file is to define a function calle step to generate data that are stable distributed.
+%The method is based on CMS method which discussed in chapter 2.
 
 function Y = step(difference,alpha,beta,n)
 sigma=difference^(1/alpha);
