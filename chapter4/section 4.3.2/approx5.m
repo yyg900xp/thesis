@@ -1,3 +1,6 @@
+%This file is to use Crank Nicolson method to approximate the solutions of the time fractional diffusion Cauchy problem.
+%d^(0.5)u(x,t)/dt^(0.5) = d^2u(x,t)/dx^2, u(x,t=0)=sin(x), x in [0, pi], u(x=0,t)=u(x=pi,t)=0
+
 n=101;
 t=linspace(0,1,n);% set time and distance scales
 x=(0:pi/100:pi);
@@ -33,6 +36,7 @@ for i=2:n-1
   u(i,:)=w;
 end
 
+%generate the figure of the approximating solutions.
 figure(1)
 plot(x,u(2,:),x,u(6,:),'--')
 legend('t=0.01','t=0.05','Location','East')
@@ -41,7 +45,7 @@ ylabel('u(x,t)');
 title('the approximating solution of the fractional diffusion equation u(x,t) at several specific time t');
 
 
-
+% compute the corresponding analytic solutions
 k=8000;
 vv=zeros(k,1);
 for i=1:k
