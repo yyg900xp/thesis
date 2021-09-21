@@ -1,3 +1,5 @@
+%This file is to define a function calle step to generate data that are stable distributed.
+
 function Y = step(difference,alpha,beta,n)
 sigma=difference^(1/alpha);
 mu=0;
