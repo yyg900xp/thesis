@@ -16,7 +16,7 @@ for i=1:c
     bounpx{i}=boundary_process{i}+x;
 end
 
-%compute the first time that the brownian motion escape from the domain [m,n]
+%compute the order of the first time that the brownian motion escape from the domain [m,n]
 order2 = cell(c,1);
 for i=1:c
     order2{i}=find(bounpx{i} <0 | bounpx{i} > pi);
